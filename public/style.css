@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+  color: gray;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  align-self: center;
+  align-content: center;
+}
+section {
+  margin: 3em;
+}

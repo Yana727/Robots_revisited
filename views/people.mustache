@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href = "/style.css">
+
+    <meta charset="utf-8">
+
+    <title>Individual robot</title>
+  </head>
+  <body>
+    <section class = "IndivInfo">
+        <h1> {{name}} </h1>
+      <img src = {{avatar}} >
+
+      <p>
+        {{#address.city}}
+          {{address.city}}
+        {{/address.city}}
+        {{address.country}}|
+        {{#job}}
+          {{job}} {{company}}
+        {{/job}}
+        {{^job}}
+          <span class = "notWorking"> Available for hire</span>
+        {{/job}}
+      </p>
+      <p>{{email}} | {{phone}}</p>
+    </section>
+      <table>
+      <dl>
+        {{#university}}
+        <dt>Education</dt>
+        <dd>
+        {{/university}}
+        <dt>Skills</dt>
+        {{#skills}}
+        <dd>{{.}}</dd> <!--what's the dot for? A: list of current string, bc there's gonna be an array -->
+        {{/skills}}
+      </dl>
+      </table>
+    </section>
+  </body>
+</html>
